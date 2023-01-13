@@ -112,7 +112,7 @@ function getNewQuestion(){
 }
 
 choices.forEach(choice => {
-    choice.addEventListener('click' e => {
+    choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false
