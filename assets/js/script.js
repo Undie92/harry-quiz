@@ -117,9 +117,9 @@ function show(count){
 
     question.innerHTML = `<h3 class="h3">Q${count + 1}. ${questions[count].question}</h3>
     <ul class="option_group">
-    <li class="option" onclick="func()">${first}</li>
-    <li class="option" onclick="func()">${second}</li>
-    <li class="option" onclick="func()">${third}</li>
+    <li class="option">${first}</li>
+    <li class="option">${second}</li>
+    <li class="option">${third}</li>
     </ul>`;
     toggleActive();
 };
