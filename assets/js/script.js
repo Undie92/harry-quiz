@@ -1,150 +1,160 @@
-const question = document.querySelector('#question')
-const choices = Array.from(document.querySelectorAll('.choice-text'));
-
-let currentQuestion = {};
-let acceptingAnswers = true;
-let availableQuestions = [];
-let questionCounter = 0;
-let score = 0
-
 
 let questions = [
     {
+        id: 1,
         question: 'When is Harry Potter’s birthday?',
-        choice1: 'July 31', // rätt svar
-        choice2: 'March 20',
-        choice3: 'September 3',
-        answer: 1,
+        answer: 'July 31',
+        option: [
+            'July 31', // rätt svar
+            'March 20',
+            'September 3',
+        ]
     },
     {
+        id: 2,
         question: 'What are the names of Harry’s parents?',
-        choice1: 'Christian and Milly Potter',
-        choice2: 'Ron and Hermione Potter',
-        choice3: 'James and Lily Potter', // rätt svar 
-        answer: 3,
+        answer: 'James and Lily Potter',
+        option: [
+            'Christian and Milly Potter',
+            'Ron and Hermione Potter',
+            'James and Lily Potter', // rätt svar 
+        ]
     },
     {
+        id: 3,
         question: 'Who are Harry’s two best friends in the world?',
-        choice1: 'Draco and Dobby',
-        choice2: 'Ron and Hermione', // rätt svar
-        choice3: 'Lily and James',
-        answer: 2,
+        answer: 'Ron and Hermione',
+        option: [
+        'Draco and Dobby',
+        'Ron and Hermione', // rätt svar
+        'Lily and James',
+        ]
     },
     {
+        id: 4,
         question: 'What animal can Harry speak to?',
-        choice1: 'Snake', // rätt svar
-        choice2: 'Cat',
-        choice3: 'Dragon',
-        answer: 1,
+        answer: 'Snake',
+        option: [
+            'Snake', // rätt svar
+            'Cat',
+            'Dragon',
+        ]
     },
     {
+        id: 5,
         question: 'What animal can Remus Lupin turn into?',
-        choice1: 'Unicorn',
-        choice2: 'Rabbit',
-        choice3: 'Werewolf', // rätt svar
-        answer: 3,
+        answer: 'Werewolf',
+        option: [
+        'Unicorn',
+        'Rabbit',
+        'Werewolf', // rätt svar
+        ]
     },
     {
+        id: 6,
         question: 'What species did Hagrid’s pet dragon, Norberta, belong to?',
-        choice1: 'Norwegian Ridgeback', // rätt svar
-        choice2: 'Hungarian Horntail',
-        choice3: 'Antipodean Opaleye',
-        answer: 1,
+        answer: 'Norwegian Ridgeback',
+        option: [
+        'Norwegian Ridgeback', // rätt svar
+        'Hungarian Horntail',
+        'Antipodean Opaleye',
+        ]
     },
     {
+        id: 7,
         question: 'What spell did Hermione use to free Harry and Ron from the Devil’s Snare?',
-        choice1: 'Lumos Solem', // rätt svar 
-        choice2: 'Petrify',
-        choice3: 'Avada Kedavra',
-        answer: 1,
+        answer: 'Lumos Solem',
+        option: [
+            'Lumos Solem', // rätt svar 
+            'Petrify',
+            'Avada Kedavra',
+        ]
     },
     {
+        id: 8, 
         question: 'What color did Hermione turn the leaves of the Weasley’s crabapple tree into for Harry’s 17th birthday?',
-        choice1: 'Green',
-        choice2: 'Gold', // rätt svar
-        choice3: 'Bronze',
-        answer: 2,
+        answer: 'Gold',
+        option: [
+            'Green',
+            'Gold', // rätt svar
+            'Bronze',
+        ]
+
     },
     {
+        id: 9,
         question: 'Which ice cream flavor did Harry eat at the zoo when he went out with the Dursleys?',
-        choice1: 'Chocolate Chip',
-        choice2: 'Lemon Ice Pop', // rätt svar
-        choice3: 'Orange Soda',
-        answer: 2, 
+        answer: 'Lemon Ice Pop', 
+        option: [
+            'Chocolate Chip',
+            'Lemon Ice Pop', // rätt svar
+            'Orange Soda',
+        ]
     },
     {
+        id: 10,
         question: 'What is the secretive radio program set up by the Order of the Phoenix?',
-        choice1: 'Potter channel',
-        choice2: 'Potterpod',
-        choice3: 'Potterwatch', // rätt svar
-        answer: 3,
+        answer: 'Potterwatch',
+        option: [
+            'Potter channel',
+            'Potterpod',
+            'Potterwatch', // rätt svar
+        ]
     },  
-]
+];
 
-const MAX_QUESTIONS = 10
-const SCORE_POINTS = 1
+let question_count = 0;
+let points = 0
 
-function startGame(){
-    questionCounter = 0
-    score = 0
-    availableQuestions = [...questions]
-    getNewQuestion()
+
+window.onload = function(){
+    show(question_count);
 };
 
-function getNewQuestion(){
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS){
-    }
-        questionCounter++
-        progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    
-    let questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionsIndex]
-    question.innerText = currentQuestion.question
+function show(count){
+    let question = document.getElementById("questions");
+    let[first, second, third] = questions[count].option;
 
-    choices.forEach(choice => {
-        let number = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + number]
-    })
+    question.innerHTML = `<h3 class="h3">Q${count + 1}. ${questions[count].question}</h3>
+    <ul class="option_group">
+    <li class="option" onclick="func()">${first}</li>
+    <li class="option" onclick="func()">${second}</li>
+    <li class="option" onclick="func()">${third}</li>
+    </ul>`;
+    toggleActive();
+};
 
-    availableQuestions.splice(questionsIndex, 1)
 
-    acceptingAnswers = true
-}
-
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return
-
-        acceptingAnswers = false
-        let selectedChoice = e.target
-        let selectedAnswer = selectedChoice.dataset['number']
-
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' 
-
-        if(classToApply === 'correct') {
-            incrementScore();
-        } else {
-            incrementWrongAnswer();
+function toggleActive(){
+    let option = document.querySelectorAll("li.option")
+    for(let i=0; i < option.length; i++){
+        option[i].onclick = function(){
+            for(let i=0; i < option.length; i++){
+                if(option[i].classList.contains("active")){
+                    option[i].classList.remove("active");
+                }
+            }
+            option[i].classList.add("active");
         }
-        selectedChoice.parentElement.classList.add(classToApply)
-
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply)
-            getNewQuestion()
-        }, 1000)
-    })
-})
-
-
-
-function incrementScore(){
-
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
+    }
 }
 
-function incrementWrongAnswer(){
+function next(){
 
-    let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore;
+    if(question_count == questions.length -1){
+        location.href = "final.html";
+    }
+    console.log(question_count);
+
+
+let user_answer = document.querySelector("li.option.active").innerHTML;
+
+if(user_answer == questions[question_count].answer){
+    points += 10;
+    sessionStorage.setItem("points",points);
+}
+console.log(points);
+
+question_count++;
+show(question_count);
 }

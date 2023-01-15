@@ -10,43 +10,28 @@
     <title>Document</title>
 </head>
 <body>
+
+
+
     <div class="container">
-    <h1 class="heading">Harry Potter Quiz</h1>
-
-
-    <div id="quiz">
-        <div id="question">
-            <h3><span class="label label-warning" id="qid">1.</span>
-            <span id="question">When is Harry Potter's birthday?</span></h3>
+        <div class="quiz_header">
+            <h1>Harry Potter Quiz</h1>
         </div>
-            <ul>
-                <li>
-                    <input type="radio" class="choice-text" data-number="1" name="selector">
-                    <label for="f-option" class="element-animation">July 31</label>
-                    <div class="check"></div>
-                </li>
-                <li>
-                    <input type="radio" name="selector" class="choice-text" data-number="2">
-                    <label for="s-option" class="element-animation">March 20</label>
-                    <div class="check"><div class="inside"></div></div>
-                </li>
-                <li>
-                    <input type="radio" name="selector" class="choice-text" data-number="3">
-                    <label for="t-option" class="element-animation">September 3</label>
-                    <div class="check"><div class="inside"></div></div>
-                </li>
-            </ul>
+        <div class="quiz">
+        
+
+        <div id="quiz_body">
+                <div id="questions">
+
+                </div>
+    
+            </div>
+            <button class="btn-next btn--gray" onclick="next()">Next Question</button>
+        </div>
     </div>
-</div>
-
-<div class="score-area">
-    <p class="scores">Correct Answers <span id="score">0</span></p>
-    <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-</div>
-
-
 
 
     <script src="assets/js/script.js"></script>
+    <script src="userinfo.js"></script>
 </body>
 </html>
