@@ -158,3 +158,4 @@ console.log(points);
 question_count++;
 show(question_count);
 }
+

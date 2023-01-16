@@ -63,9 +63,9 @@ body {
     -webkit-transition: all 0.25s linear;
   }
   
-.option:hover {
-  color: #FFFFFF;
-}
+  .option:hover {
+    color: #FFFFFF; 
+  }
 
 
 .btn-next {
@@ -84,6 +84,14 @@ body {
   border: 1px transparent;
   border-radius: 20px;
 }
+
+.home {
+    text-decoration: none!important;
+    background: #445361;
+    color: white;
+  }
+
+
 .btn--gray:active,
 .btn--gray:hover {
     background-color: #0d1013;

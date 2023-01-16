@@ -7,29 +7,25 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Your Score</title>
 </head>
 <body>
 
-
-
-    <div class="container">
-        <div class="quiz_header">
-            <h1>Harry Potter Quiz</h1>
-        </div>
-        <div class="quiz">
-        
-
-        <div id="quiz_body">
-                <div id="questions">
-
+        <div class="wrapper">
+            <div class="border">
+                <h1 class="quiz_header">
+                    <br>
+                    Well Done, you are now a Harry Potter fan!
+                </h1>
+                <div class="quiz" style="text-decoration: none;">
+                    <p class="userpoints">
+                        Your points
+                        <span id="score" style="color: rgb(38, 88, 45);">0</span>
+                    </p>
+                    <button class="btn-next btn--gray"><a href="index.html" class="home">Play again!</a></button>
                 </div>
-    
             </div>
-            <button class="btn-next btn--gray" onclick="next()">Next Question</button>
         </div>
-    </div>
-
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/userinfo.js"></script>
