@@ -149,9 +149,9 @@ function next(){
 
 let user_answer = document.querySelector("li.option.active").innerHTML;
 
-if(user_answer == questions[question_count].answer){
+if(user_answer === questions[question_count].answer){
     points += 10;
-    sessionStorage.setItem("points",points);
+    localStorage.setItem("points", points);
 }
 console.log(points);
 
