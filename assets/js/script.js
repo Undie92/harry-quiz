@@ -157,3 +157,11 @@ console.log(points);
 question_count++;
 show(question_count);
 }
+
+function myFunction(e) {
+    var elems = document.querySelector(".active");
+    if(elems !==null){
+     elems.classList.remove("active");
+    }
+   e.target.className = "active";
+  }
