@@ -106,12 +106,11 @@ let questions = [
 let question_count = 0;
 let points = 0
 
-
 window.onload = function(){
     show(question_count);
 };
 
-function show(count){
+function show(count) {
     let question = document.getElementById("questions");
     let[first, second, third] = questions[count].option;
 
@@ -139,7 +138,7 @@ function toggleActive(){
     }
 }
 
-function next(){
+function next() {
 
     if(question_count == questions.length -1){
         location.href = "final.html";
@@ -158,4 +157,3 @@ console.log(points);
 question_count++;
 show(question_count);
 }
-
