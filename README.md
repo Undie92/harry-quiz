@@ -1,9 +1,36 @@
 # Harry Potter Quiz
 
+Harry Potter quiz is a game to test your knowledge about the world of Hogwarts. Test your skills and challenge your friends, 
+to see who scores the highest points.
+
+The quiz has 10 questions, ranged from easy - expert kind of questions. Can you get a score of 100 on this quiz?
+Be sure to brag, if you do.
+
+
+![Am i responsive?](assets/pictures/quiz-responsive.png)
 
 ## Features
 
 ### Existing Features
+
+ * Landing Page
+   * At the top of the page, is a header, acting as a link for you to click whenever you want to start over.
+   * This header clearly tells you what game you are playing.
+   * The rules tells you that cheating / googling the answers is not okay, since this is a challenge to yourself.
+   * The rules tells you how many questions the quiz has, and how many points you get per question.
+
+![Landing Page](assets/pictures/landing.png)
+
+* Questions
+  * This section tells you what question you are beeing asked to answer.
+  * This section provides you with 3 answers, 1 is the right answer.
+
+![Questions](assets/pictures/quiz-onetoten.png)
+
+* Score
+  * This section congratulates you for completing the quiz, and tells you how many points you got.
+
+![Score](assets/pictures/final-page.png)
 
 ### Features Left to Implement
  * When there is time, i would like to implement a scoreboard.
@@ -25,6 +52,8 @@
    * No errors were returned when passing through the official W3C validator.
  * CSS
    * No errors were found when passing through the official (Jigsaw) validator.
+ * JavaScript
+   * No errors were found when passing through the official JSHint JavaScript validator.
 
 ### Unfixed Bugs
 No unfixed bugs
