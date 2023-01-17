@@ -61,7 +61,7 @@ No unfixed bugs
 ## Deployment
  * The site was deployed to GitHub pages.
 
-The link can be found here -(Harry Potter Quiz)[]
+The link can be found here - [Harry Potter Quiz](https://undie92.github.io/harry-quiz/)
 
 
 ## Credits
