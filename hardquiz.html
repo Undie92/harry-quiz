@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="./favicon.ico"/>
-    <title>Error 404</title>
+    <title>Harry Potter Quiz</title>
 </head>
-<body>
+<body onload="diffQuestions(question_count)">
 
 
 
@@ -18,19 +18,27 @@
         <div class="quiz_header">
             <h1><a href="index.html" style="text-decoration:none; color:white;">Harry Potter Quiz</a></h1>
         </div>
-        <div class="rules-info">
-            <div class="rules">
-                <h1>Woops, something went wrong.</h1>
-                <p>Click <a href="index.html">here</a> to get back to the frontpage</p>
-            </div>
-        </div>
+        <div class="quiz">
         
-    </div>
+            <div id="quiz2">
 
-<footer>
-    <div>
-        <p style="color: #fff"> Made by Undie92 | copyright © 2023</p>
+                <div id="quiz_body">
+                    <div id="hardQuestions">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+                <button class="btn-next btn--gray" onclick="next2()">Next Question</button>
+        </div>
     </div>
-</footer>
+    <footer>
+        <div>
+            <p style="color: #fff"> Made by Undie92 | copyright © 2023</p>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

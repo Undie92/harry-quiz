@@ -10,7 +10,7 @@
     <link rel="icon" href="./favicon.ico"/>
     <title>Harry Potter Quiz</title>
 </head>
-<body>
+<body onload="ezQuestions(question_count)">
 
 
 
@@ -20,18 +20,24 @@
         </div>
         <div class="quiz">
         
+            <div id="quiz1">
 
-        <div id="quiz_body">
-                <div id="questions">
-
+                <div id="quiz_body">
+                    <div id="easyQuestions">
+                        
+                    </div>
+                    
                 </div>
-    
             </div>
             <button class="btn-next btn--gray" onclick="next()">Next Question</button>
         </div>
     </div>
 
-
+<footer>
+    <div>
+        <p style="color: #fff"> Made by Undie92 | copyright © 2023</p>
+    </div>
+</footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
