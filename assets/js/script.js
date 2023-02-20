@@ -221,7 +221,8 @@ function ezQuestions(count){
     <li class="option">${first}</li>
     <li class="option">${second}</li>
     <li class="option">${third}</li>
-    </ul>`;
+    </ul>
+    <p>You got ${points} points out of 100 total so far. </p>`;
     toggleActive();
 };
 
@@ -235,7 +236,8 @@ function diffQuestions(count){
     <li class="option">${first}</li>
     <li class="option">${second}</li>
     <li class="option">${third}</li>
-    </ul>`;
+    </ul>
+    <p>You got ${points} points out of 100 total so far. </p>`;
     toggleActive();
 };
 
