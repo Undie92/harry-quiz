@@ -210,6 +210,11 @@ let hardQuestions = [
 let question_count = 0;
 let points = 0;
 
+function getName() {
+    let name = document.getElementById('username').value;
+    localStorage.setItem("name", name);
+}
+
 
 // function to generate the easy questions from "easyQuestions"
 
