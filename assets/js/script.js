@@ -230,7 +230,7 @@ function ezQuestions(count){
     <li class="option">${second}</li>
     <li class="option">${third}</li>
     </ul>
-    <p>You got ${points} points out of 100 total so far. </p>`;
+    <p>You got ${points} points out of 1000 total so far. </p>`;
     toggleActive();
 };
 
@@ -245,7 +245,7 @@ function diffQuestions(count){
     <li class="option">${second}</li>
     <li class="option">${third}</li>
     </ul>
-    <p>You got ${points} points out of 100 total so far. </p>`;
+    <p>You got ${points} points out of 1000 total so far. </p>`;
     toggleActive();
 };
 
@@ -279,7 +279,7 @@ function next() {
 let user_answer = document.querySelector("li.option.active").innerHTML;
 
 if(user_answer === easyQuestions[question_count].answer){
-    points += 10;
+    points += 100;
     localStorage.setItem("points", points);
 }
 console.log(points);
@@ -302,7 +302,7 @@ function next2() {
 let user_answer = document.querySelector("li.option.active").innerHTML;
 
 if(user_answer === hardQuestions[question_count].answer){
-    points += 10;
+    points += 100;
     localStorage.setItem("points", points);
 }
 console.log(points);
