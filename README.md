@@ -3,7 +3,7 @@
 Harry Potter quiz is a game to test your knowledge about the world of Hogwarts. Test your skills and challenge your friends, 
 to see who scores the highest points.
 
-The quiz has 2 difficulty levels with 10 questions each level, the difficulty levels that can be played is, easy & hard. Can you get a score of 100 on both levels?
+The quiz has 2 difficulty levels with 10 questions each level, the difficulty levels that can be played is, easy & hard. Can you get a score of 1000 on both levels?
 Be sure to brag, if you do.
 
 
@@ -22,30 +22,30 @@ Be sure to brag, if you do.
    * The landing page also allows the user to enter a username, to make the game more personal.
    * At the bottom of the page, is a footer, telling you that the page is copyrighted and is made by the site developer.
 
-![Landing Page](assets/pictures/landing-page.png)
+![Landing Page](assets/pictures/landing-page1.png)
 
 * Easy questions
   * Contains questions ranging 1-10.
   * This section tells you what question you are beeing asked to answer.
   * This section provides you with 3 answers, 1 is the right answer.
-  * Shows your current score out of 100 total points.
+  * Shows your current score out of 1000 total points.
 
-![Questions](assets/pictures/easy-question.png)
+![Questions](assets/pictures/easy-question1.png)
 
 * Hard questions
   * Contains questions ranging 1-10.
   * This section tells you what question you are beeing asked to answer.
   * This section provides you with 3 answers, 1 is the right answer.
-  * Shows your current score out of 100 total points.
+  * Shows your current score out of 1000 total points.
 
-![Questions](assets/pictures/hard-question.png)
+![Questions](assets/pictures/hard-question1.png)
 
 * Score
   * This section shows your username if you entered a username at the start.
-  * This section shows your total score out of a 100 points.
+  * This section shows your total score out of a 1000 points.
   * This section congratulates you for completing the quiz, asking you if you would like to try again.
 
-![Score](assets/pictures/final-result.png)
+![Score](assets/pictures/final-result1.png)
 
 ### Features Left to Implement
  * When there is time, i would like to implement a scoreboard.
