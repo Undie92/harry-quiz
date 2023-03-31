@@ -12,24 +12,30 @@
 </head>
 <body>
 
-        <div class="wrapper">
-            <div class="border">
-                <h1 class="quiz_header">
-                    <br>
-                    <a href="index.html" style="text-decoration:none; color:white;">Well Done! You are now a Harry Potter fan!</a>
-                </h1>
-                <div class="quiz" style="text-decoration: none;">
-                    <p class="userpoints">
-                        Congratulations, <strong><span id="user"></span></strong> you scored a total of: 
-                        <span id="score" style="color: rgb(38, 88, 45);">0</span> points out of a 100 points!
-                    </p>
-                    <p class="userpoints">
-                        If you would like to try again, please press Play Again! button and challenge yourself once more.
-                    </p>
-                    <button class="btn-next btn--gray btn-final" onclick="window.location.href='index.html'">Play again!</button>
-                </div>
+<section>
+    <div class="wrapper">
+        <div class="border">
+            <h1 class="quiz_header">
+                <!-- Title -->
+                <br>
+                <a href="index.html" style="text-decoration:none; color:white;">Well Done! You are now a Harry Potter fan!</a>
+            </h1>
+            <div class="quiz" style="text-decoration: none; padding-top: 1em;">
+                <!-- Info about score -->
+                <h2>Congratulations <strong><span id="user"></span></strong></h2>
+                <p class="userpoints">
+                    You scored a total of: 
+                    <span id="score" style="color: rgb(38, 88, 45);">0</span> points out of a 100 points!
+                </p>
+                <p class="userpoints">
+                    If you would like to try again, please press Play Again! button and challenge yourself once more.
+                </p>
+                <!-- Button to play again -->
+                <button class="btn-next btn--gray btn-final" onclick="window.location.href='index.html'">Play again!</button>
             </div>
         </div>
+    </div>
+</section>
 
 <footer>
     <div>

@@ -4,11 +4,13 @@ body {
   text-align: center;
 }
 
+/* Title styling */
 .quiz_header {
   text-align: center;
   font-size: 1.5rem;
 }
 
+/* Quiz styling */
 .quiz {
   background: #ffffff;
   box-sizing: border-box;
@@ -21,6 +23,7 @@ body {
   margin-right: auto;
 }
 
+/* Points */
 .userpoints{
   font-size: 1.50em;
 }
@@ -144,7 +147,7 @@ margin-bottom: 10px;
 }
 
 
-
+/* Media Queries */
 @media (max-width: 460px) {
   #quiz_body {
       width: 100%;

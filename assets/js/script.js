@@ -1,4 +1,4 @@
-
+// Questions for the easy difficulty
 let easyQuestions = [
     {
         id: 1,
@@ -102,7 +102,7 @@ let easyQuestions = [
         ]
     },  
 ];
-
+// Questions for the hard difficulty
 let hardQuestions = [
     {
         id: 1,
@@ -209,6 +209,9 @@ let hardQuestions = [
 
 let question_count = 0;
 let points = 0;
+
+// function to get the username from input on frontpage
+// Storing the username locally
 
 function getName() {
     let name = document.getElementById('username').value;
